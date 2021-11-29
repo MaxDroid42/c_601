@@ -1,3 +1,4 @@
+//https://github.com/MaxDroid42/c_601/blob/main/main.c
 /* address_list.c */
 // This program should be completed such that it maintains a list of students
 // X TO DO 1: Write a function inputStudent(int i), which allows the user to enter first name and last name and stores it at position i in the array.
@@ -13,6 +14,7 @@
 // X TO DO 8: Extend the program such it also handles address information (street, number, zip-code and city).
 // TO DO 9: optional: Add a function and menu item for deleting a selected student.
 //          --> sry, but that breaks some things, I would have to reimplement, and I'm too lazy for that...
+//          --> actually quiet easy if we don't reuse student_ids and just override them with an empty person (and maybe set a del_flag...)
 // TO DO 10: optional: Add a function to sort the data according to given criteria
 
 #include <stdio.h>
@@ -222,7 +224,7 @@ void inputFormStudent(){
     scanf("%s", &first_name);
     printf("Enter last_name: ");
     scanf("%s", &last_name);
-    printf("\nEnter gender: ");
+    printf("\nEnter gender (divers/female/male): ");
     scanf("%s", &gender);
 
     struct date bd;
